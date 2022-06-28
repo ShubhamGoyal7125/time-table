@@ -1,0 +1,148 @@
+<!-- /////////////////////////// Home Page for teachers of the University /////////////////////////// -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Time Desk</title>
+    <link rel="stylesheet" href="../teacher_info/teacher_info.css">
+    <link rel="stylesheet" href="main/style.css">
+    <link rel="shortcut icon" href="../images/ss-logo.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+
+    <!-- Navbar containing name and logo and student details -->
+    <div id="nav-bar">
+
+        <nav>
+            <div class="upper-part">
+                <img class="logo" src="images/logo.jpg" alt="img"></td>
+                <p class="heading">Jan Nayak Chaudhary Devi Lal College Of Engineering,Sirsa</p>
+                <div id="teacher_basic_info">
+                    <p id="teacher_name">
+                        <%=Teacher_Name%>
+                    </p>
+                    <p id="teacher_id">
+                        <%=Teacher_Id%>
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="navbar">
+            <ul class="list">
+                <li class="item"> <a href="/" target="_blank">HOME</a></li>
+                <li class="item"> <a href="https://cdlu.digitaluniversity.ac/SearchDuplicateResult.aspx?ID=859"
+                        target="_blank">RESULTS</a></li>
+                <li class="item"> <a href="https://jcdeng.edu.in/#" target="_blank">ADMISSIONS</a></li>
+                <li class="item"> <a href="https://jcdv.edu.in/contact-jcdv/" target="_blank">CONTACTS</a></li>
+            </ul>
+        </div>
+
+
+
+        <img src="<%=src%>" alt="" id="teacher_img">
+
+    </div>
+
+
+
+    <!-- Main div containing everything other than navbar -->
+    <div id="main">
+
+        <!-- Main div containing all the content of teacher -->
+        <div id="content">
+            <div id="content-div">
+
+
+                <!-- Weekly Time table of teacher -->
+                <div id="my-time-table">
+
+                    <h2 id="time-table-heading">My Time Desk</h2>
+                    <ul id="colorPalette">
+                        <li class="no-classColor">No Class</li>
+                        <li class="lunch-timeColor">Lunch Time</li>
+                        <li class="todayColor">Toady</li>
+                        <li class="on-goingColor">On-Going Class</li>
+                        <li class="next-classColor">Next Class Alert</li>
+                    </ul>
+
+                    <!-- Time table of student -->
+                    <table id="teacher-time-table">
+
+                        <tr>
+                            <th></th>
+                            <th class="table-time">9-10</th>
+                            <th class="table-time">10-11</th>
+                            <th class="table-time">11-12</th>
+                            <th class="table-time">12-1</th>
+                            <th class="table-time">1-2</th>
+                            <th class="table-time">2-3</th>
+                            <th class="table-time">3-4</th>
+
+                        </tr>
+ 
+
+                        <% for(day_number=1;day_number<8;day_number++) { %>
+
+                            <tr>
+
+                                <th id="<%=days[day_number-1]%>" class="weekday <%=days[day_number-1]%>">
+                                    <%=`${days[day_number-1]}`%>
+                                </th>
+
+                                <% for(slot_number=1;slot_number<8;slot_number++) { %>
+
+                                    <% if(index<results.length && results[index].day_number==day_number &&
+                                        results[index].slot_number==slot_number){ %>
+
+                                        <td id="<%=days[day_number-1]%>_<%=7+slot_number%>"
+                                            class="<%=days[day_number-1]%> checkclass">
+                                            <%=results[index].class_name%>(<%=results[index].subject_id%>)
+                                        </td>
+                                        <% index++; %>
+
+                                            <% } else { %>
+
+                                                <td id="<%=days[day_number-1]%>_<%=7+slot_number%>"
+                                                    class="<%=days[day_number-1]%> checkclass">No Class</td>
+
+                                                <% } %>
+
+                                                    <% } %>
+
+                            </tr>
+
+                            <% } %>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>Copyright &copy; Ankit 2022</p>
+    </div>
+
+    <!-- Local js files -->
+    <script src="../teacher_info/teacher_info.js"></script>
+
+
+
+</body>
+
+</html>

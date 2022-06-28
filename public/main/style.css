@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('../images/background.jpg');
+}
+
+nav {
+    width: 100%;
+}
+
+.upper-part {
+    border: 1px solid rgb(189, 239, 189);
+    display: flex;
+    background-color: rgb(8, 65, 30);
+}
+
+.logo {
+    width: 90px;
+}
+
+.heading {
+    background-color: rgb(8, 65, 30);
+    color: antiquewhite;
+    font-size: 35px;
+    padding: 25px;
+
+}
+
+.navbar {
+    display: flex;
+    background-color: rgb(33, 192, 94);
+}
+
+.list {
+    list-style: none;
+    display: flex;
+}
+
+.item {
+    padding: 2%;
+    margin: 3% 13%;
+    text-align: center;
+    border-right: 2px solid white;
+    border-left: 2px solid white;
+    font-size: 15px;
+    transition: transform .3s;
+}
+
+.item:hover {
+    transform: scale(1.2);
+}
+
+.item a {
+    text-decoration: none;
+    color: white;
+}
+
+.time-head {
+    padding:5px;
+    text-align: center;
+    color: rgb(20, 122, 25);
+}
+
+.teachstud {
+    margin: 2.4% auto;
+}
+
+.teachstud img {
+    border: 4px solid green;
+    border-radius: 20px;
+    height: 400px;
+    width: 450px;
+
+}
+
+.tt-image1 {
+    margin-left: 10%;
+    margin-right: 20%;
+
+}
+
+.footer {
+    padding: 1.8px;
+    text-align: center;
+    background-color: rgb(8, 65, 30);
+    color: rgb(95, 223, 159);
+
+}

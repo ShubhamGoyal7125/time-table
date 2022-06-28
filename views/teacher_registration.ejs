@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher-Register</title>
+    <link rel="stylesheet" href="main/style.css">
+    <link rel="stylesheet" href="../registration/registration.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav>
+        <div class="upper-part">
+            <img class="logo" src="images/logo.jpg" alt="img"></td>
+            <p class="heading">Jan Nayak Chaudhary Devi Lal College Of Engineering,Sirsa</p>
+        </div>
+    </nav>
+    <div class="navbar">
+        <ul class="list">
+            <li class="item"> <a href="/index">HOME</a></li>
+            <li class="item"> <a href="https://cdlu.digitaluniversity.ac/SearchDuplicateResult.aspx?ID=859"
+                    target="_blank">RESULTS</a></li>
+            <li class="item"> <a href="https://jcdeng.edu.in/#" target="_blank">ADMISSIONS</a></li>
+            <li class="item"> <a href="https://jcdv.edu.in/contact-jcdv/" target="_blank">CONTACTS</a></li>
+        </ul>
+    </div>
+    <div class="teacher" id="teacher">
+
+        <div class="teacher-login-form">
+
+            <div id="t1">
+                <form action="/teacher_registration" method="post" id="login-form">
+                    <div><label for="name">Name:</label>
+                        <input type="text" name="name" required>
+                    </div>
+                    <div>
+                        <label for="teacher_id">Teacher Id:</label>
+                        <input type="text"name="teacher_id" required>
+                    </div>
+                    <div><label for="Phone No:">Phone No:</label>
+                        <input type="text" name="phone" required>
+                    </div>
+                    <div><label for="email_id">Email:</label>
+                        <input type="email" placeholder="example@gmail.com" name="email_id" required>
+                    </div>
+                    <div><label for="password">Password:</label>
+                        <input type="password" name="password" id="password" required>
+                    </div>
+                    <p>Show Password<input type="checkbox" id="checkbox1" onclick="checkbox()"></p>
+                    <button type="text" class="submit">Submit</button>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Copyright &copy; Ankit 2022</p>
+    </footer>
+    <!-- Local js file -->
+    <script src="../teacher_login/teacher_login.js"></script>
+</body>
+
+</html>
